@@ -18,6 +18,8 @@ public:
         for (int j = 1; j <= nums[i]; j++) {
             // Recursively check if we can reach the end from index i + j
             p = p | hlo(nums, i + j);
+            if(p) // if true found from anypath return truee;
+          return true;
 
             // Early exit: if we already found a valid path, no need to continue
             if (p) break;
